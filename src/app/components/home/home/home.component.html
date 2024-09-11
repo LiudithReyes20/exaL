@@ -1,0 +1,91 @@
+<div class="main-container">
+    <div class="container">
+        <header class="menu-container">
+            <div class="menu-content">
+                <div class="logo">
+                    <img >
+                </div>
+                <div class="buttons">
+                    <button mat-raised-button>Registrarse</button>
+                    <button mat-raised-button [routerLink]="['/login']">Iniciar sesión</button>
+                </div>
+            </div>
+        </header>
+        
+        <div class="main-section-container">
+            <div class="main-section-content">
+                <h1 class="title">Busca tu hotel y reserva ahora!</h1>
+           
+               
+                <div class="find-hotel-bar">
+                    <!-- Campo de texto con lista de opciones -->
+                    <input type="text" list="hotel-options" id="hotel-input" name="hotel-input" placeholder="Selecciona o escribe un hotel" (input)="onHotelSelect($event)">
+                    <datalist id="hotel-options">
+                        <option *ngFor="let hotel of hoteles" [value]="hotel.nombre"></option>
+                    </datalist>
+                    
+               <!-- Input de personas y habitaciones con menú desplegable -->
+<div class="personas-habitaciones-field">
+    <input 
+        type="text" 
+        id="personas-habitaciones-input" 
+        placeholder="Personas y habitaciones" 
+        [value]="personasYHabitaciones"
+        readonly 
+        [matMenuTriggerFor]="personasMenu"
+    >
+    <mat-menu #personasMenu="matMenu">
+        <div class="mat-menu-content">
+            <div>
+                <label>Habitaciones</label>
+                <button mat-icon-button (click)="restarHabitaciones()">-</button>
+                <span>{{ habitaciones }}</span>
+                <button mat-icon-button (click)="agregarHabitaciones()">+</button>
+            </div>
+            <div>
+                <label>Personas</label>
+                <button mat-icon-button (click)="restarPersonas()">-</button>
+                <span>{{ personas }}</span>
+                <button mat-icon-button (click)="agregarPersonas()">+</button>
+            </div>
+        </div>
+    </mat-menu>
+</div>
+
+                    <!-- Filtrar por precio -->
+                    <div class="price-filter">
+                        <input type="number" id="min-price" name="min-price" placeholder="Precio mínimo" [(ngModel)]="precioMinimo">
+                        <input type="number" id="max-price" name="max-price" placeholder="Precio máximo" [(ngModel)]="precioMaximo">
+                        <span>{{precioMinimo}} - {{precioMaximo}} MXN</span>
+                    </div>
+
+                    <!-- Botón de búsqueda -->
+                    <button class="search-button">Buscar</button>
+                </div>
+
+
+            <!--aqui empieza el contenido de los hoteles-->
+        
+            <div *ngFor="let hotel of allHotels" class="hotel-details-container">
+                <div class="hotel-image">
+                  <img [src]="hotel" alt="Imagen del hotel" />
+                </div>
+                <div class="hotel-info">
+                  <h1 class="hotel-name">{{ hotel.nombre_hotel }}</h1>
+                  <p class="hotel-location">{{ hotel.direccion }}</p>
+                  <p class="hotel-description">{{ hotel.descripcion }}</p>
+                  <div class="hotel-rating-price">
+                    <span class="hotel-stars">
+                      <ng-container *ngFor="let star of starsArray">
+                        <mat-icon>star</mat-icon>
+                      </ng-container>
+                    </span>
+                    <!--<span class="hotel-price">Precio por noche: {{ hotel.price | currency }}</span>-->
+                  </div>
+                  <button mat-raised-button color="primary" (click)="reserve()">Ver disponibilidad</button>
+                </div>
+              </div>
+           
+       
+    </div>
+</div>

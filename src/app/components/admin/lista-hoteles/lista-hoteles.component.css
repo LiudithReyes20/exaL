@@ -1,0 +1,196 @@
+.ancho {
+    width: 50%;
+  }
+  
+  .flex-container {
+    display: flex;
+    /*height: 100vh; /* Ocupa toda la altura de la ventana */
+  }
+
+  app-sidevar {
+   /* flex: 0 0 250px; /* Ancho fijo para el sidebar, ajusta según lo necesites */
+    /*border-right: 1px solid #ccc; /* Línea divisoria opcional */
+    height: 100vh;
+  }
+
+
+  .main-content {
+    flex: 1; /* El contenido principal ocupará el espacio restante */
+    padding: 20px; /* Espaciado interno para el contenido */
+    overflow: auto; /* Permite desplazamiento si el contenido es más grande que el contenedor */
+  }
+
+  .small-input {
+    height: 40px;
+    border-radius: 18px;
+    border-width: 1px;
+    border-color: #ccc;
+  }
+  
+  .input-icon {
+    position: absolute;
+    right: 20px; /* Ajusta la posición del ícono */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #999; /* Color del ícono */
+    pointer-events: none; /* Asegura que el ícono no interfiera con los clics */
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .table {
+    border-radius: 8px;
+    overflow: hidden;
+    border: none !important;
+    background-color:#c4dafa  ;
+  }
+  
+  .activo {
+    background-color: #d4edda; /* Verde claro */
+    color: hsl(226, 70%, 60%); /* Verde oscuro para el texto */
+  }
+  
+  .inactivo {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro para el texto */
+  }
+  
+  .acciones-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+  }
+  
+  /* Estilos generales para el botón de agregar */
+  .botones {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .separar {
+    padding: 3%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #122761;
+  }
+  
+  .boton {
+    color: hwb(0 100% 0%) !important;
+    font-size: 16px; /* Ajustado para hacerlo más pequeño */
+    font-weight: 500;
+    padding: 0.3em 1em; /* Ajustado para hacerlo más pequeño */
+    background: #318aac;
+    border: 2px solid;
+    border-color: hsl(214, 59%, 45%);
+    position: relative;
+    padding-right: 5px;
+  }
+  
+  .boton:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 1s ease;
+  }
+  
+  .boton:hover:before {
+    width: 100%;
+  }
+  
+  .green-text {
+    color: #0b0c4d;
+    font-weight: 700;
+  }
+  
+  .boton {
+    background-color: hsl(204, 100%, 14%);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Ajustado para hacerlo más pequeño */
+    transition: all 0.3s;
+  }
+  
+  .custom-header-blue {
+    background-color: hsl(219, 89%, 59%); /* Azul */
+    color: #0b0c4d; /* Texto blanco */
+  }
+  
+  .boton-redondeado {
+    border-radius: 5px; /* Borde redondeado */
+  }
+  
+  .boton-chico {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    padding: 5px 10px; /* Padding más pequeño */
+  }
+  
+  /* Estilos para la barra de búsqueda */
+  .ancho {
+    position: relative;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #aaa;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .small-input {
+    padding-left: 35px; /* Espacio para el ícono */
+  }
+  
+  .small-input:focus + .search-icon,
+  .small-input:hover + .search-icon {
+    transform: translateY(-60%) scale(1.7);
+    color: hsl(236, 100%, 14%);
+  }
+  
+  .bi {
+    padding-right: 10px;
+  }
+  
+  
+  /* Estilo específico para el botón Agregar */
+  .section-add {
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón al final del contenedor */
+    margin-top: 20px; /* Espacio superior opcional */
+  }
+  
+  .button-add {
+    background-color: #0056b3; /* Azul */
+    color: #ffffff;
+    padding: 12px 24px; /* Ajusta el padding según el diseño */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: none; /* Elimina la sombra del botón */
+    font-size: 16px; /* Tamaño del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  }
+  
+  /* Estilo del botón al pasar el ratón */
+  .button-add:hover {
+    background-color: #003d7a; /* Color azul más oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra al pasar el ratón */
+  }
+  

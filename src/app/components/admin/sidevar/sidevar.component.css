@@ -1,0 +1,79 @@
+.mat-sidenav-container {
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    display: flex; /* Usa flexbox para distribuir el contenido */
+  }
+  
+  /* Estilo para la barra lateral */
+  .mat-sidenav {
+    width: 280px; /* Ancho de la barra lateral */
+    background-color: #005187; /* Azul */
+    color: white; /* Color del texto en la barra lateral */
+    display: flex; /* Asegura que los elementos se alineen correctamente */
+    flex-direction: column; /* Organiza los elementos en una columna */
+  }
+  
+  /* Estilo para el contenido principal */
+  .mat-sidenav-content {
+    flex: 1; /* Ocupa todo el espacio restante */
+    padding: 20px; /* Espaciado interior del contenido principal */
+    background-color: #fcffff; /* Fondo blanco */
+    color: black; /* Texto negro para el contenido principal */
+  }
+  
+  /* Estilo para los elementos activos del menú */
+  .mat-nav-list button.active {
+    background-color: #d17600; /* Naranja más oscuro para el elemento activo */
+  }
+  
+  /* Estilo para los botones en la barra lateral */
+  .mat-nav-list button {
+    margin-bottom: 10px;
+    color: #CCCCCC; /* Color de texto predeterminado */
+    font-size: 16px;
+    font-family: sans-serif;
+    transition: color 0.3s ease; /* Transición suave del color durante 0.3 segundos */
+  }
+  
+  /* Estilo para los botones al pasar el ratón */
+  .mat-nav-list button:hover {
+    color: #FD9727; /* Cambia a color naranja cuando el ratón está sobre el botón */
+  }
+  
+  /* Estilos adicionales para botones transparentes */
+  .hover-orange:hover {
+    background-color: #61606060;
+    color: white; /* Cambia el color del texto si es necesario para mejorar la legibilidad */
+    text-align: left;
+  }
+  
+  .transparent-button {
+    border: none;
+    background-color: transparent;
+    color: #CCCCCC;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 4%;
+    border-radius: 0%;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 30px; /* Ajusta el margen izquierdo del texto */
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: auto; /* Asegura que el botón se ajuste a su contenido */
+  }
+  
+  .transparent-button mat-icon {
+    margin-right: 10px;
+  }
+  
+  .mat-sidenav a {
+    text-decoration: none;
+  }
+  
+  /* Estilo para botón activo */
+  .transparent-button.active {
+    color: #ffffff; /* Cambia el color de texto cuando está activo */
+    background-color: #9696964d; /* Cambia el color de fondo cuando está activo */
+  }
