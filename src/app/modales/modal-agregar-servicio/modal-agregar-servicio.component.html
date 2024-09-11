@@ -1,0 +1,29 @@
+<h2 mat-dialog-title class="dialog-title">Agregar Nuevo Servicio</h2>
+
+<form #hotelForm="ngForm" (ngSubmit)="guardarService()">
+  <mat-dialog-content>
+    <div class="input-container">
+      <mat-form-field class="custom-input">
+        <mat-label>Nombre servicio</mat-label>
+        <input matInput name="nombre_hotel" [(ngModel)]="nuevoService.nombre_service" required>
+      </mat-form-field>
+
+    <mat-form-field class="custom-input">
+      <mat-label>Detalles</mat-label>
+      <textarea matInput name="descripcion_hotel" [(ngModel)]="nuevoService.descripcion_service" required></textarea>
+    </mat-form-field>
+  </div>
+
+   
+
+    
+
+    
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    
+    <button mat-button type="submit" [disabled]="!hotelForm.valid" cdkFocusInitial>Guardar</button>
+  </mat-dialog-actions>
+</form>

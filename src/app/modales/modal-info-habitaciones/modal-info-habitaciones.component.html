@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>Habitaciones del Hotel</h2>
+<mat-dialog-content>
+  <table mat-table [dataSource]="habitaciones" class="mat-elevation-z8">
+    <!-- Número de Habitación Column -->
+    <ng-container matColumnDef="numero">
+      <th mat-header-cell *matHeaderCellDef> Número </th>
+      <td mat-cell *matCellDef="let habitacion"> {{ habitacion.numero_habitacion }} </td>
+    </ng-container>
+
+    <!-- Tipo Column -->
+    <ng-container matColumnDef="tipo">
+      <th mat-header-cell *matHeaderCellDef> Tipo </th>
+      <td mat-cell *matCellDef="let habitacion"> {{ habitacion.tipo }} </td>
+    </ng-container>
+
+    <!-- Capacidad Column -->
+    <ng-container matColumnDef="capacidad">
+      <th mat-header-cell *matHeaderCellDef> Capacidad </th>
+      <td mat-cell *matCellDef="let habitacion"> {{ habitacion.capacidad }} </td>
+    </ng-container>
+
+    <!-- Precio por Noche Column -->
+    <ng-container matColumnDef="precio">
+      <th mat-header-cell *matHeaderCellDef> Precio por Noche </th>
+      <td mat-cell *matCellDef="let habitacion"> {{ habitacion.precio_por_noche }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['numero', 'tipo', 'capacidad', 'precio']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['numero', 'tipo', 'capacidad', 'precio'];"></tr>
+  </table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cerrar</button>
+</mat-dialog-actions>

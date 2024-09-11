@@ -1,0 +1,48 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened>
+      <!-- Contenido de la barra lateral -->
+      <br>
+      <mat-nav-list>
+        <p style="margin-top: 4%; text-align: left; padding-left: 30px; color: #CCCCCC; font-size: 12px; display: flex; align-items: center;">
+          <mat-icon style="margin-right: 25px; font-size: 16px;">place</mat-icon>
+          Reservaciones
+        </p>
+        <hr>
+  
+        <button class="hover-orange transparent-button" routerLink="/listaHoteles" routerLinkActive="active">
+          <mat-icon>hotel</mat-icon> 
+          Hoteles
+        </button>
+  
+        <button class="hover-orange transparent-button" routerLink="/listaTuristicos" routerLinkActive="active">
+          <mat-icon>location_on</mat-icon> 
+          Sitios turisticos
+        </button>
+  
+        <button class="hover-orange transparent-button" routerLink="/listaServicios" routerLinkActive="active">
+          <mat-icon>room_service</mat-icon> 
+          Servicios
+        </button>
+  
+        <button class="hover-orange transparent-button" routerLink="/registrar" routerLinkActive="active">
+          <mat-icon>person</mat-icon>
+          Registro
+        </button>
+  
+        <button *ngIf="tipoUser==2" class="hover-orange transparent-button" routerLink="/infoCliente" routerLinkActive="active">
+          <mat-icon>info</mat-icon>
+          Informacion
+        </button>
+  
+        <button class="hover-orange transparent-button" (click)="logout()">
+          <mat-icon>power_settings_new</mat-icon> 
+          Cerrar sesión
+        </button>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <!-- Aquí se renderiza el contenido de los componentes -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

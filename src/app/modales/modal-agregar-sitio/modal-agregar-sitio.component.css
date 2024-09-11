@@ -1,0 +1,107 @@
+/* Estilo del título */
+.dialog-title {
+    color: hsl(0, 0%, 100%);
+    background-color: #424242;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor de inputs alineados */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* Inputs personalizados */
+.custom-input {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.custom-input .mat-input-element {
+    background-color: #ffffff;
+    border: 1px solid #0056b3;
+    border-radius: 4px;
+}
+
+.custom-input .mat-input-element:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+.custom-input .mat-form-field-label {
+    color: #0056b3 !important;
+}
+
+.custom-input .mat-select-trigger {
+    border: 1px solid #0056b3;
+    background-color: #ffffff;
+}
+
+/* Vista previa de la imagen */
+.image-preview {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Estilo de los botones */
+button[mat-button] {
+    background-color: #005187;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 10px; /* Espacio entre botones */
+    box-shadow: none; /* Elimina la sombra del botón */
+
+
+}
+
+
+
+/* Contenedor del modal: Sin overflow */
+.mat-dialog-container {
+    overflow: hidden; /* Asegura que el contenedor no tenga barras de desplazamiento */
+    max-height: 90vh; /* Ajusta la altura máxima del modal */
+    padding: 0; /* Elimina cualquier relleno extra que pueda causar overflow */
+}
+
+/* Contenido del modal con scroll controlado */
+mat-dialog-content {
+    max-height: 70vh; /* Limita la altura del contenido */
+    overflow-y: auto; /* Solo se mostrará la barra interna si es necesario */
+    padding: 0 24px; /* Rellena el contenido para una mejor visualización */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+}
+
+/* Estilo de la barra de desplazamiento interna */
+mat-dialog-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+mat-dialog-content::-webkit-scrollbar-thumb {
+    background-color: #0056b3;
+    border-radius: 4px;
+}
+
+/* Para otros navegadores */
+mat-dialog-content {
+    scrollbar-color: #0056b3 #f5f5f5;
+    scrollbar-width: thin;
+}
